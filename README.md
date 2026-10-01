@@ -8,8 +8,8 @@
 ![Category](https://img.shields.io/badge/NextWave-AI%20%26%20ML-8A2BE2)
 ![Track](https://img.shields.io/badge/track-Document%20Ops-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Python](https://img.shields.io/badge/backend-FastAPI-009688)
-![React](https://img.shields.io/badge/frontend-React%20%2B%20Vite-61DAFB)
+![Backend](https://img.shields.io/badge/backend-FastAPI-009688)
+![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20Vite-61DAFB)
 
 [🌐 Live Demo](https://sfcbitpy.odinno.com) · [💻 GitHub](https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine) · [📝 Technical Blog](https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html)
 
@@ -36,9 +36,9 @@ NextWave AI and ML — AI-Powered Document Ops · Version 1.0
 
 | Resource | Link |
 |---|---|
-| **Live URL** | https://sfcbitpy.odinno.com |
-| **GitHub Repository** | https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine |
-| **Technical Blog** | https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html |
+| **Live URL** | [https://sfcbitpy.odinno.com](https://sfcbitpy.odinno.com) |
+| **GitHub Repository** | [https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine](https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine) |
+| **Technical Blog** | [https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html](https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html) |
 
 ---
 
@@ -139,7 +139,7 @@ The API uses JWT authentication with four roles: **customer**, **service-centre 
 | **Database** | MySQL |
 | **OCR / vision** | Tesseract, OpenCV, QR decoding, Pillow (summary-card rendering) |
 | **ML** | scikit-learn (pipelines, Random Forest, Logistic Regression), XGBoost, CNN and ResNet18 image classifiers (Keras / TensorFlow Lite export), joblib |
-| **Storage** | Uploaded files on disk, referenced in the database. Versioned model artefacts |
+| **Storage** | Uploaded files on disk, referenced in the database. Versioned model artifacts |
 
 > Exact package versions: see `requirements.txt` and `package.json` in the repository.
 
@@ -147,18 +147,37 @@ The API uses JWT authentication with four roles: **customer**, **service-centre 
 
 ## 📂 Folder Structure
 
-The logical modules are listed below.
-
-| Module | Purpose |
-|---|---|
-| `backend` (FastAPI app) | REST endpoints for auth, products, warranties, claims, documents, reviews, notifications, admin analytics |
-| `frontend` (React + Vite) | Claim wizard, dashboards, reviewer queue, charts |
-| `ml_service` | Tabular classifier, image classifiers, decision engine, summary-card renderer |
-| OCR / rules / contradiction / duplicate modules | Supporting pipeline stages |
-| Policy files (JSON) | Per-category warranty rules, editable without retraining |
-| Settings file | Confidence thresholds for model comparison |
-
-<!-- TODO: replace this table with the real tree:  tree -L 2 -I "node_modules|__pycache__|venv" -->
+```text
+AssureX-Warranty-Claim-Engine/
+│
+├── Source Code/                          # Core ML pipeline
+│   ├── data/
+│   │   └── processed/                    # Train / validation / test CSVs
+│   │       ├── train.csv
+│   │       ├── val.csv
+│   │       └── test.csv
+│   ├── model/                            # Trained model artifacts
+│   │   └── python_claim_model.pkl
+│   └── src/                              # Source scripts
+│
+├── Deployed Application/                 # Frontend + Backend (React + FastAPI)
+├── Dataset/                              # Raw and processed data
+├── Python Classification Model Evidence/
+├── Project Report/
+├── Test Case/
+├── Execution Instruction/
+├── Installation Instruction/
+├── Warranty Policy/
+├── Model Prediction/
+├── AI Usage/
+├── Technical Blogger/
+├── Video/
+├── Github Repository/
+│
+├── .gitattributes
+├── LICENSE
+└── README.md
+```
 
 ---
 
@@ -166,8 +185,8 @@ The logical modules are listed below.
 
 **Prerequisites**
 
-- Python 3.x (TODO: exact version)
-- Node.js and npm (TODO: exact version)
+- Python 3.x
+- Node.js and npm
 - MySQL server
 - Tesseract OCR installed and on your `PATH`
 
@@ -176,13 +195,16 @@ The logical modules are listed below.
 git clone https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine.git
 cd AssureX-Warranty-Claim-Engine
 
-# 2. Backend dependencies
+# 2. Backend dependencies (run where requirements.txt lives)
+cd "Deployed Application/backend"
 pip install -r requirements.txt
 
 # 3. Frontend dependencies
-# TODO: confirm the frontend folder name
-cd frontend && npm install
+cd "../frontend"
+npm install
 ```
+
+Step-by-step guides are also in the `Installation Instruction` and `Execution Instruction` folders.
 
 ---
 
@@ -191,12 +213,11 @@ cd frontend && npm install
 The backend uses SQLAlchemy over **MySQL**.
 
 ```bash
-# 1. Create the database
+# Create the database
 mysql -u <user> -p -e "CREATE DATABASE <db_name>;"
-
-# 2. Create tables / seed data
-# TODO: add the real command (Alembic migration, init script, or auto-create on startup)
 ```
+
+Tables are created by the backend's SQLAlchemy models. See `Installation Instruction` for the exact initialization step.
 
 ---
 
@@ -205,13 +226,12 @@ mysql -u <user> -p -e "CREATE DATABASE <db_name>;"
 Create a `.env` file in the backend directory:
 
 ```env
-# TODO: replace with the variables your code actually reads
 DATABASE_URL=mysql+pymysql://<user>:<password>@localhost:3306/<db_name>
 SECRET_KEY=<long-random-string>
 UPLOAD_DIR=<path-for-uploaded-documents>
 ```
 
-**Behaviour settings** (configurable, no retraining needed):
+**Behavior settings** (configurable, no retraining needed):
 
 | Setting | Default | Effect |
 |---|---|---|
@@ -228,16 +248,15 @@ UPLOAD_DIR=<path-for-uploaded-documents>
 ## ▶️ Running the Application
 
 ```bash
-# Backend
-# TODO: confirm module path, e.g. uvicorn app.main:app --reload
-uvicorn <module>:app --reload
+# Backend (from the backend folder; adjust the module path if your entry point differs)
+uvicorn app.main:app --reload
 
-# Frontend
-cd frontend
+# Frontend (in a second terminal)
+cd "Deployed Application/frontend"
 npm run dev
 ```
 
-Both ML models load once at server start-up and are cached in memory, so the first request after start-up is not slower than later ones.
+Both ML models load once at server start-up and are cached in memory, so later requests stay fast.
 
 ---
 
@@ -252,8 +271,6 @@ Both ML models load once at server start-up and are cached in memory, so the fir
 7. **Reviewers** work the queue of manual-review claims and see model outputs, rule results, and explanations in one place.
 8. **Administrators** view analytics and the audit log.
 
-<!-- TODO: add screenshots, e.g. ![Claim wizard](docs/screenshots/wizard.png) ![Decision view](docs/screenshots/decision.png) -->
-
 ---
 
 ## 🤖 Machine Learning Models
@@ -262,11 +279,11 @@ Two models look at the same claim from different angles, so one model's blind sp
 
 | | **Model 1: Tabular** | **Model 2: Image** |
 |---|---|---|
-| **Approach** | scikit-learn pipeline (preprocessing + classifier saved as one joblib artefact) | CNN trained with the Google Teachable Machine workflow; ResNet18 transfer learning tried as an alternative |
+| **Approach** | scikit-learn pipeline (preprocessing + classifier saved as one joblib artifact) | CNN trained with the Google Teachable Machine workflow; ResNet18 transfer learning tried as an alternative |
 | **Input** | Structured features: product age, remaining warranty months, purchase price, repair history, document and contradiction flags, product category, fault type | **Claim Summary Card** image rendered from the claim's facts |
 | **Output** | Class + probability for each of 3 classes | Softmax probability for each of 3 classes |
-| **Selected model** | Random Forest (300 trees, balanced class weights) | See blog for image-model results |
-| **Test accuracy** | ~96% | TODO |
+| **Selected model** | Random Forest (300 trees, balanced class weights) | See the [technical blog](https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html) |
+| **Test accuracy** | ~96% | See the technical blog |
 
 ### Algorithm comparison (tabular, identical preprocessing)
 
@@ -276,7 +293,7 @@ Two models look at the same claim from different angles, so one model's blind sp
 | XGBoost | ~95.9% |
 | Logistic Regression | ~95.1% |
 
-Random Forest was chosen for the best balance of accuracy and robustness, and for well-behaved probability estimates. The manual-review class was the hardest to separate. Those claims sit deliberately between valid and invalid.
+Random Forest was chosen for the best balance of accuracy and robustness, and for well-behaved probability estimates. The manual-review class was the hardest to separate, because those claims sit deliberately between valid and invalid.
 
 ### Claim Summary Card
 
@@ -323,13 +340,9 @@ Early claim IDs encoded the class in a prefix letter. Because the ID was printed
 
 ## 🧪 Testing
 
-- Confidence-comparison logic is unit-tested at every boundary, including the exact threshold values.
-- Tabular candidates were evaluated on a held-out test set with confusion matrices per class.
-
-```bash
-# TODO: add the real test command, e.g. pytest
-pytest
-```
+- The confidence-comparison logic is unit-tested at every boundary, including the exact threshold values.
+- Tabular candidates were evaluated on a held-out test set with per-class confusion matrices.
+- Test cases and evidence are in the `Test Case` and `Python Classification Model Evidence` folders.
 
 ---
 
@@ -337,17 +350,18 @@ pytest
 
 | Problem | Cause and fix |
 |---|---|
-| OCR misses text on a dim or uneven receipt | The engine already tries cleaned and raw images. Correct the fields manually in the review step. Your values override OCR. |
+| OCR misses text on a dim or uneven receipt | The engine already tries cleaned and raw images. Correct the fields manually in the review step, because your values override OCR. |
+| Tesseract not found | Install Tesseract and make sure it is on your `PATH`. |
+| Database connection fails | Check `DATABASE_URL` in `.env` and that the MySQL server is running. |
+| Model file not found | Confirm `python_claim_model.pkl` exists under `Source Code/model/`. |
 | Card renderer fails with a font error on Linux or macOS | Known issue: the renderer has hardcoded Windows font paths. Point it to an installed font. |
 | Claim keeps going to Manual Review | Expected when the two models disagree or confidence is below 0.60. Check the comparison status on the claim. |
-| Image-model training is very slow | CPU-only training is slow. Train on a stratified subset of cards for iteration. |
-| Tesseract not found | Install Tesseract and make sure it is on your `PATH`. |
 
 ---
 
 ## ⚠️ Known Limitations
 
-- **Synthetic data.** Reported accuracy comes from synthetic claims. Real-world performance is unverified.
+- **Synthetic data.** Reported accuracy comes from synthetic claims, so real-world performance is unverified.
 - **Manual-review class** is the hardest to classify by design.
 - **Novel inputs.** The image model can be confused by categories or fault words never seen in training.
 - **Tabular model** occasionally predicts valid for excluded damage when the damage flag is weak. The rules engine acts as the safety net.
@@ -373,9 +387,10 @@ pytest
 |---|---|
 | Google Teachable Machine workflow | Training and exporting the image classifier |
 | scikit-learn, XGBoost, TensorFlow / Keras | Training and evaluating the models |
-| TODO: list any AI assistants used | TODO: code, documentation, dataset generation, etc. |
+| Gemini | AI assistant for code, documentation, and dataset generation |
+| Claude (Anthropic) | Drafting and structuring this README |
 
-<!-- TODO: be specific here. Competitions usually want to see exactly what AI helped with. -->
+Full details are in the `AI Usage` folder.
 
 ---
 
