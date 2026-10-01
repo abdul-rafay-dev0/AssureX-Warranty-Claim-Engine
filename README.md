@@ -11,7 +11,7 @@
 ![Backend](https://img.shields.io/badge/backend-FastAPI-009688)
 ![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20Vite-61DAFB)
 
-[🌐 Live Demo](https://sfcbitpy.odinno.com) · [💻 GitHub](https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine) · [📝 Technical Blog](https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html)
+[🌐 Live Demo](https://sfcbitpy.odinno.com) · [💻 GitHub](https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine) · [📝 Technical Blog](https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html) · [📦 Dataset](https://doi.org/10.5281/zenodo.23080248)
 
 **Team SFC-BitPy** · Abdul Rafay · Hifza Aziz · Veeraj Kumar · Muhammad Umer
 
@@ -39,6 +39,7 @@ NextWave AI and ML — AI-Powered Document Ops · Version 1.0
 | **Live URL** | [https://sfcbitpy.odinno.com](https://sfcbitpy.odinno.com) |
 | **GitHub Repository** | [https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine](https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine) |
 | **Technical Blog** | [https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html](https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html) |
+| **Dataset (Zenodo)** | [10.5281/zenodo.23080248](https://doi.org/10.5281/zenodo.23080248) |
 
 ---
 
@@ -151,85 +152,57 @@ The API uses JWT authentication with four roles: **customer**, **service-centre 
 AssureX-Warranty-Claim-Engine/
 │
 ├── Source Code/                          # Core ML pipeline
-│   ├── data/
-│   │   └── processed/                    # Train / validation / test CSVs
-│   │       ├── train.csv
-│   │       ├── val.csv
-│   │       └── test.csv
 │   ├── model/                            # Trained model artifacts
 │   │   └── python_claim_model.pkl
 │   └── src/                              # Source scripts
 │
 ├── Deployed Application/                 # Frontend + Backend (React + FastAPI)
-├── Dataset/                              # Raw and processed data
-├── Python Classification Model Evidence/
+├── Python Classification Model Evidence/ # Tabular model training and evaluation evidence
+├── Model Prediction/                     # Sample model predictions
 ├── Project Report/
 ├── Test Case/
 ├── Execution Instruction/
 ├── Installation Instruction/
 ├── Warranty Policy/
-├── Model Prediction/
 ├── AI Usage/
 ├── Technical Blogger/
-├── Video/
 ├── Github Repository/
 │
 ├── .gitattributes
+├── .gitignore
 ├── LICENSE
 └── README.md
 ```
+
+> **Note:** The full dataset (150,000 claims and 30,000 card images) is hosted on Zenodo instead of GitHub because of its size: [10.5281/zenodo.23080248](https://doi.org/10.5281/zenodo.23080248). Everything else is in this repository.
 
 ---
 
 ## ⚙️ Installation
 
-**Prerequisites**
+The application is **deployed and live** at https://sfcbitpy.odinno.com, so no local installation is needed to use or evaluate it.
+
+To run the project on your own machine, follow the step-by-step guides in the `Installation Instruction` and `Execution Instruction` folders. You will need:
 
 - Python 3.x
 - Node.js and npm
 - MySQL server
-- Tesseract OCR installed and on your `PATH`
+- Tesseract OCR (on your `PATH`)
 
 ```bash
-# 1. Clone
 git clone https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine.git
 cd AssureX-Warranty-Claim-Engine
-
-# 2. Backend dependencies (run where requirements.txt lives)
-cd "Deployed Application/backend"
-pip install -r requirements.txt
-
-# 3. Frontend dependencies
-cd "../frontend"
-npm install
 ```
-
-Step-by-step guides are also in the `Installation Instruction` and `Execution Instruction` folders.
 
 ---
 
 ## 🗄️ Database Setup
 
-The backend uses SQLAlchemy over **MySQL**.
-
-```bash
-# Create the database
-mysql -u <user> -p -e "CREATE DATABASE <db_name>;"
-```
-
-Tables are created by the backend's SQLAlchemy models. See `Installation Instruction` for the exact initialization step.
+The live application runs on a managed **MySQL** database, so there is nothing to set up to use it. For a local copy, the database steps are in the `Installation Instruction` folder.
 
 ---
 
 ## 🔧 Configuration
-
-Create a `.env` file in the backend directory:
-
-```env
-DATABASE_URL=mysql+pymysql://<user>:<password>@localhost:3306/<db_name>
-SECRET_KEY=<long-random-string>
-UPLOAD_DIR=<path-for-uploaded-documents>
-```
 
 **Behavior settings** (configurable, no retraining needed):
 
@@ -241,22 +214,15 @@ UPLOAD_DIR=<path-for-uploaded-documents>
 | Uncertain | highest confidence < 0.60 | Flagged as uncertain |
 | Warranty policies | JSON per product category | Duration, covered and excluded faults, mandatory documents, reporting window, repair-history limit |
 
-> ⚠️ Never commit `.env`. Keep it in `.gitignore`.
+> ⚠️ Environment-specific settings such as database credentials and secret keys live in a private `.env` file. Never commit it.
 
 ---
 
 ## ▶️ Running the Application
 
-```bash
-# Backend (from the backend folder; adjust the module path if your entry point differs)
-uvicorn app.main:app --reload
+Open the live application at **https://sfcbitpy.odinno.com**. No setup is required.
 
-# Frontend (in a second terminal)
-cd "Deployed Application/frontend"
-npm run dev
-```
-
-Both ML models load once at server start-up and are cached in memory, so later requests stay fast.
+To run it locally instead, follow the `Execution Instruction` folder. Both ML models load once at server start-up and are cached in memory, so later requests stay fast.
 
 ---
 
@@ -317,6 +283,8 @@ Comparison statuses: `Strong Match` · `Acceptable Match` · `Weak Match` · `Mo
 
 No public warranty-claim dataset exists, so the team **generated a synthetic corpus**.
 
+> **Download:** the full corpus is hosted on Zenodo, not in this repository, because it is over 30,000 files: [10.5281/zenodo.23080248](https://doi.org/10.5281/zenodo.23080248). It is a single `Dataset.rar` archive (1.3 GB, CC BY 4.0) holding the train/validation/test CSVs and the Claim Summary Card images (PNG). Extract it with 7-Zip or WinRAR. If you use it, please cite the DOI. The table below describes how it was built and what it contains.
+
 | Property | Detail |
 |---|---|
 | **Source** | Synthetic, from 40 scenario templates across 3 families |
@@ -352,7 +320,7 @@ Early claim IDs encoded the class in a prefix letter. Because the ID was printed
 |---|---|
 | OCR misses text on a dim or uneven receipt | The engine already tries cleaned and raw images. Correct the fields manually in the review step, because your values override OCR. |
 | Tesseract not found | Install Tesseract and make sure it is on your `PATH`. |
-| Database connection fails | Check `DATABASE_URL` in `.env` and that the MySQL server is running. |
+| Database connection fails (local run) | Check the database credentials in your local `.env` and that the MySQL server is running. |
 | Model file not found | Confirm `python_claim_model.pkl` exists under `Source Code/model/`. |
 | Card renderer fails with a font error on Linux or macOS | Known issue: the renderer has hardcoded Windows font paths. Point it to an installed font. |
 | Claim keeps going to Manual Review | Expected when the two models disagree or confidence is below 0.60. Check the comparison status on the claim. |
@@ -396,13 +364,13 @@ Full details are in the `AI Usage` folder.
 
 ## 📄 License
 
-Released under the **MIT License**. See [LICENSE](LICENSE).
+Released under the **MIT License**. See [LICENSE](LICENSE). The dataset is released separately on Zenodo under **CC BY 4.0**.
 
 ---
 
 <div align="center">
 
 Built by **Team SFC-BitPy** for **NextWave: AI-Powered Document Ops**<br>
-[Live Demo](https://sfcbitpy.odinno.com) · [Repository](https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine) · [Technical Blog](https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html)
+[Live Demo](https://sfcbitpy.odinno.com) · [Repository](https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine) · [Technical Blog](https://assurexclaimengine00.blogspot.com/2026/09/assurex-claim-warranty-engine.html) · [Dataset](https://doi.org/10.5281/zenodo.23080248)
 
 </div>
