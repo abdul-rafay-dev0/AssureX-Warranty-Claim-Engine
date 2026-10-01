@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "best_algorithm": "RandomForest",
+  "trained_at": "2026-09-28T10:16:25.576729Z",
+  "classes": [
+    "Invalid",
+    "Manual_Review",
+    "Valid"
+  ],
+  "feature_count": 15,
+  "numeric_features": [
+    "product_age_months",
+    "warranty_duration_months",
+    "remaining_warranty_months",
+    "purchase_price",
+    "repair_history_count",
+    "unauthorized_repair_flag",
+    "serial_number_match",
+    "receipt_attached",
+    "warranty_card_attached",
+    "damage_photo_attached",
+    "serial_photo_attached",
+    "contradiction_flag",
+    "duplicate_flag"
+  ],
+  "categorical_features": [
+    "product_category",
+    "fault_type"
+  ],
+  "test_accuracy": 0.9630123292235921
+}

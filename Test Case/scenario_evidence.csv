@@ -1,0 +1,12 @@
+#,Scenario,Setup,Expected Outcome,Result
+1,Valid claim,"Active warranty, covered fault, all documents, serial matched",Likely Valid,DEMONSTRATED
+2,Invalid claim,Excluded damage (liquid damage) or policy violation,Likely Invalid,DEMONSTRATED
+3,Manual-review claim,Mixed/borderline signals requiring human judgement,Manual Review Required,DEMONSTRATED
+4,Expired-warranty claim,remaining_warranty_months <= 0,Likely Invalid (hard-fail),DEMONSTRATED
+5,Missing-document claim,A mandatory document not uploaded,Manual Review Required,DEMONSTRATED
+6,Duplicate claim,Same document hash / serial used before,Manual Review Required,DEMONSTRATED
+7,Contradictory claim,claim_date before purchase_date,Manual Review Required,DEMONSTRATED
+8,Serial-number mismatch,OCR serial != registered serial,Manual Review Required,DEMONSTRATED
+9,Unauthorized-repair claim,unauthorized_repair flag set,Manual Review Required / Invalid,DEMONSTRATED
+10,Tricky boundary-date claim,remaining warranty exactly 0 / claim on purchase date,Expired handled as boundary,DEMONSTRATED
+11,Model-disagreement case,Python and GTM predict different classes,Manual Review Required,DEMONSTRATED

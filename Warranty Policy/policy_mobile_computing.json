@@ -1,0 +1,82 @@
+{
+  "policy_id": "policy_mobile_computing",
+  "policy_name": "Mobile & Computing Warranty Policy",
+  "version": "1.0.0",
+  "product_categories": ["Mobile Phone", "Laptop", "Tablet", "Smartphone"],
+  "coverage_duration_months": [12, 24],
+  "warranty_start_conditions": {
+    "start_event": "purchase_date",
+    "activation_required": true,
+    "activation_window_days": 30,
+    "proof_of_purchase_required": true,
+    "notes": "Warranty begins on the purchase date shown on the receipt. If activation is required it must be completed within 30 days."
+  },
+  "covered_faults": [
+    "display_defect",
+    "battery_failure",
+    "charging_issue",
+    "software_fault",
+    "audio_issue",
+    "power_issue",
+    "button_failure",
+    "motherboard_failure"
+  ],
+  "exclusions": {
+    "damage_types": [
+      "liquid_damage",
+      "physical_impact",
+      "tampered",
+      "unauthorized_modification",
+      "cosmetic_damage",
+      "power_surge_misuse"
+    ],
+    "conditions": [
+      "Rooting, jailbreaking or unauthorized firmware voids the warranty",
+      "Liquid damage is excluded unless the device is IP-rated for that exposure",
+      "Normal cosmetic wear is not covered"
+    ]
+  },
+  "claim_reporting_period_days": 21,
+  "repair_conditions": {
+    "authorized_only": true,
+    "max_repairs_before_review": 2,
+    "parts_must_be_oem": true,
+    "notes": "Repairs at unauthorized centres void the warranty and route the claim to manual review."
+  },
+  "authorized_service_center": {
+    "required": true,
+    "centers": ["AuthorizedHub", "BrandService", "CityRepair"],
+    "outside_center_action": "hard_fail"
+  },
+  "replacement_conditions": {
+    "max_product_age_months_for_replacement": 12,
+    "requires_authorization": true,
+    "not_covered_if_already_replaced": true
+  },
+  "grace_period_days": 5,
+  "mandatory_documents": ["purchase_receipt", "warranty_card", "product_photo", "serial_label_photo"],
+  "hard_fail_rules": [
+    "warranty_expired",
+    "excluded_damage",
+    "replacement_already_completed",
+    "outside_coverage_category",
+    "reporting_deadline_missed"
+  ],
+  "warning_rules": [
+    "missing_document",
+    "serial_mismatch",
+    "borderline_expiry",
+    "repair_history_exceeded",
+    "late_reporting_near_limit"
+  ],
+  "manual_review_rules": [
+    "date_contradiction",
+    "possible_duplicate",
+    "uncertain_serial",
+    "incomplete_warranty_info",
+    "conflicting_evidence",
+    "unknown_repair_authorization",
+    "model_disagreement",
+    "low_confidence"
+  ]
+}

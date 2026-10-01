@@ -1,0 +1,65 @@
+Test ID,Category,Title,Steps,Expected Result,Status
+TC-FUNC-01,Functional,User registration,Register a new customer with valid name/email/password,"Account created, JWT returned, redirected to dashboard",PASS
+TC-FUNC-02,Functional,Login (all roles),"Login as customer, service_center, reviewer, admin",Each role lands on its own dashboard,PASS
+TC-FUNC-03,Functional,Product registration,"Submit product form with name, category, serial, purchase details",Product stored and listed under Products,PASS
+TC-FUNC-04,Functional,Warranty registration,Set warranty duration/type while registering a product,Warranty row created with computed expiry; shown on Warranties page,PASS
+TC-FUNC-05,Functional,Claim creation wizard,"Complete 5 wizard steps (Product, Fault, Documents, Review, Submit)",Claim created with code CLAIM-#####,PASS
+TC-FUNC-06,Functional,Document upload,"Upload receipt, warranty card, damage photo, serial photo","Files saved, SHA-256 hashes stored, OCR preview shown",PASS
+TC-FUNC-07,Functional,Extracted-data verification,Edit an OCR field in step 4,Correction saved and used as the verified source,PASS
+TC-FUNC-08,Functional,Dual-model evaluation,Click 'Run Dual-Model Evaluation',"Python + GTM predictions, match status and final decision displayed",PASS
+TC-FUNC-09,Functional,Claim status tracking,Open a claim after evaluation,Status badge reflects Submitted/Under Evaluation/Manual Review/Approved,PASS
+TC-FUNC-10,Functional,CSV export,Admin clicks 'Export CSV',assurex_claims_export.csv downloaded,PASS
+TC-INT-01,Integration,Health check,GET /api/health,api/database/models all report ok/true,PASS
+TC-INT-02,Integration,Auth -> product -> claim flow,"Login, create product, create claim end to end",All API calls succeed with 200/201,PASS
+TC-INT-03,Integration,Upload -> OCR -> evaluate,Upload files then evaluate,OCR text stored and evaluation returns a decision,PASS
+TC-INT-04,Integration,Reviewer override + audit,Reviewer overrides a decision,Claim updated and audit_logs row created,PASS
+TC-INT-05,Integration,Static upload serving,GET an uploaded file URL,File served from /uploads,PASS
+TC-BND-01,Boundary,Remaining warranty = 0,remaining_warranty_months = 0,Treated as expired -> warranty_expired,PASS
+TC-BND-02,Boundary,Remaining warranty = 1,remaining_warranty_months = 1,Not expired -> no warranty_expired,PASS
+TC-BND-03,Boundary,Claim on purchase date,fault_date == claim_date == purchase_date,No contradiction,PASS
+TC-BND-04,Boundary,Confidence exactly at threshold,top confidence = 0.60,Classified per threshold rule (Uncertain below 0.60),PASS
+TC-BND-05,Boundary,Confidence difference exactly 0.10/0.20,diff = 0.10 and 0.20,"Strong <=0.10, Acceptable <=0.20",PASS
+TC-BND-06,Boundary,Reporting exactly at deadline,lag == reporting_period_days,Within period (not late),PASS
+TC-NEG-01,Negative,Invalid file type,Upload a .exe file,Rejected with 'File type not allowed',PASS
+TC-NEG-02,Negative,Oversized file,Upload > 10 MB,Rejected with 'File too large',PASS
+TC-NEG-03,Negative,Fault date before purchase,fault_date < purchase_date,Rejected with clear validation message,PASS
+TC-NEG-04,Negative,Missing required claim fields,Submit claim without damage_type,422 invalid/incomplete data,PASS
+TC-NEG-05,Negative,Unknown product id,Create claim for a non-existent product,404 Product not found,PASS
+TC-SEC-01,Security,Unauthenticated access,Call a protected endpoint without a token,401 Unauthorized,PASS
+TC-SEC-02,Security,Role-based access control,Customer calls an admin endpoint,403 Forbidden,PASS
+TC-SEC-03,Security,Cross-user claim access,Customer A opens Customer B's claim,403 Forbidden,PASS
+TC-SEC-04,Security,Password hashing,Inspect users table,"password_hash only (pbkdf2_sha256), no plaintext",PASS
+TC-SEC-05,Security,Path traversal in filename,Upload file named ../../evil.png,Filename sanitized; saved inside uploads dir,PASS
+TC-SEC-06,Security,Expired/invalid JWT,Send a tampered token,401 Invalid token,PASS
+TC-DB-01,Database,Schema creation,Run python -m backend.database.init_db,9 tables created,PASS
+TC-DB-02,Database,Seed users/product,Run init_db,4 demo users + 1 demo product seeded,PASS
+TC-DB-03,Database,Unique serial constraint,Insert two products with the same serial,Unique constraint violation,PASS
+TC-DB-04,Database,Cascade delete claim,Admin deletes a claim,"Documents, repairs and audit rows removed",PASS
+TC-DB-05,Database,JSON rule_findings stored,Evaluate a claim,rule_findings JSON persisted and reloaded,PASS
+TC-OCR-01,OCR,Receipt text extraction,Upload a clear receipt image,"Date, price, retailer, serial extracted",PASS
+TC-OCR-02,OCR,QR code decode,Upload a serial QR image,QR value decoded and appended to text,PASS
+TC-OCR-03,OCR,Low-quality image,Upload a blurred receipt,Partial/empty text; 'No OCR text' shown (no crash),PASS
+TC-OCR-04,OCR,File hashing,Upload any file,SHA-256 hash computed and stored,PASS
+TC-PY-01,Python Model,Prediction + confidences,Evaluate a claim,Predicted class + probabilities for all 3 classes,PASS
+TC-PY-02,Python Model,Model file present,Check ml_service/models/python_claim_model.pkl,File loads and predicts,PASS
+TC-PY-03,Python Model,Unknown category robustness,Predict with unseen product_category,No error (handle_unknown=ignore),PASS
+TC-GTM-01,GTM,Card classification,Classify a rendered summary card,Predicted class + 3 confidences,PASS
+TC-GTM-02,GTM,Model file present,Check ml_service/models/teachable_machine.keras,Model loads and predicts,PASS
+TC-GTM-03,GTM,Card has no label leakage,Inspect a rendered card,No class label / prediction printed on card,PASS
+TC-CMP-01,Model Comparison,Match status computation,Both models agree closely,Strong Match,PASS
+TC-CMP-02,Model Comparison,Confidence difference,Compute |conf_py - conf_gtm|,Delta computed and shown with threshold legend,PASS
+TC-CMP-03,Model Comparison,Consistency statuses,Exercise all five statuses,Strong/Acceptable/Weak/Disagreement/Uncertain returned,PASS
+TC-RULE-01,Rule Engine,Warranty active,remaining > 0,warranty_expired NOT raised,PASS
+TC-RULE-02,Rule Engine,Excluded damage,damage_type = liquid_damage,excluded_damage raised -> Likely Invalid,PASS
+TC-RULE-03,Rule Engine,Policy loading per category,Load policy for Mobile/Electronics/Home Appliances,Correct policy JSON returned,PASS
+TC-RULE-04,Rule Engine,Unauthorized repair,unauthorized_repair = 1,unauthorized_repair raised,PASS
+TC-CONTRA-01,Contradiction,Claim before purchase,claim_date < purchase_date,claim_date_before_purchase,PASS
+TC-CONTRA-02,Contradiction,Fault after claim,fault_date > claim_date,fault_date_after_claim,PASS
+TC-MISS-01,Missing Document,Missing warranty card,Upload receipt only,missing_documents lists warranty_card; Manual Review,PASS
+TC-MISS-02,Missing Document,All documents present,Upload all mandatory docs,No missing_documents,PASS
+TC-DUP-01,Duplicate,Duplicate document hash,Upload the same receipt twice,duplicate_document_hash raised,PASS
+TC-DUP-02,Duplicate,Duplicate serial claim,Two claims on the same serial,duplicate_serial_claim raised,PASS
+TC-SERIAL-01,Serial Mismatch,Document serial differs,OCR serial != registered serial,serial_number_mismatch -> Manual Review,PASS
+TC-SERIAL-02,Serial Mismatch,Unreadable serial photo,Serial photo unreadable,serial_number_unreadable -> Manual Review,PASS
+TC-LOWCONF-01,Low Confidence,Top confidence < 0.60,Both models low confidence,Uncertain Result -> Manual Review,PASS
+TC-DISAGREE-01,Model Disagreement,Different predictions,"Python=Valid, GTM=Invalid",Model Disagreement -> Manual Review,PASS

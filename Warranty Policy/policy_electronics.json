@@ -1,0 +1,80 @@
+{
+  "policy_id": "policy_electronics",
+  "policy_name": "Consumer Electronics Warranty Policy",
+  "version": "1.0.0",
+  "product_categories": ["TV", "Camera", "Printer", "Electronics", "Monitor"],
+  "coverage_duration_months": [12, 24, 36],
+  "warranty_start_conditions": {
+    "start_event": "purchase_date",
+    "activation_required": false,
+    "activation_window_days": 0,
+    "proof_of_purchase_required": true,
+    "notes": "Standard manufacturer warranty begins on the purchase date; no separate activation is required."
+  },
+  "covered_faults": [
+    "display_defect",
+    "power_issue",
+    "software_fault",
+    "audio_issue",
+    "button_failure",
+    "cooling_failure",
+    "component_failure"
+  ],
+  "exclusions": {
+    "damage_types": [
+      "liquid_damage",
+      "physical_impact",
+      "tampered",
+      "unauthorized_modification",
+      "power_surge",
+      "consumable_wear"
+    ],
+    "conditions": [
+      "Consumables such as bulbs, fuses and print heads are excluded",
+      "Damage caused by incorrect installation is not covered",
+      "Commercial use reduces coverage"
+    ]
+  },
+  "claim_reporting_period_days": 30,
+  "repair_conditions": {
+    "authorized_only": true,
+    "max_repairs_before_review": 3,
+    "parts_must_be_oem": false,
+    "notes": "Up to three repairs are allowed before the claim is routed to manual review."
+  },
+  "authorized_service_center": {
+    "required": true,
+    "centers": ["AuthorizedHub", "BrandService", "CityRepair"],
+    "outside_center_action": "manual_review"
+  },
+  "replacement_conditions": {
+    "max_product_age_months_for_replacement": 6,
+    "requires_authorization": true,
+    "not_covered_if_already_replaced": true
+  },
+  "grace_period_days": 0,
+  "mandatory_documents": ["purchase_receipt", "warranty_card", "product_photo", "serial_label_photo"],
+  "hard_fail_rules": [
+    "warranty_expired",
+    "excluded_damage",
+    "replacement_already_completed",
+    "outside_coverage_category"
+  ],
+  "warning_rules": [
+    "missing_document",
+    "serial_mismatch",
+    "borderline_expiry",
+    "repair_history_exceeded"
+  ],
+  "manual_review_rules": [
+    "date_contradiction",
+    "possible_duplicate",
+    "uncertain_serial",
+    "incomplete_warranty_info",
+    "conflicting_evidence",
+    "unknown_repair_authorization",
+    "reporting_deadline_missed",
+    "model_disagreement",
+    "low_confidence"
+  ]
+}

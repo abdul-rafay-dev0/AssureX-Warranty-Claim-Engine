@@ -1,0 +1,19 @@
+{
+  "total_test_claims_reported": 32,
+  "model_consistency_status_distribution": {
+    "Strong Match": 9,
+    "Weak Match": 8,
+    "Acceptable Match": 8,
+    "Model Disagreement": 7
+  },
+  "final_decision_distribution": {
+    "Likely Invalid": 15,
+    "Manual Review Required": 13,
+    "Likely Valid": 4
+  },
+  "python_accuracy_on_report": 0.96875,
+  "gtm_accuracy_on_report": 0.8125,
+  "predicted_class_agreement_rate": 0.78125,
+  "mean_confidence_difference": 0.14919687499999998,
+  "sent_to_manual_review": 13
+}

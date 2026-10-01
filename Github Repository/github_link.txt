@@ -1,0 +1,54 @@
+AssureX Claim Engine - Public GitHub Repository
+================================================
+
+Repository URL (SAMPLE - replace with your real link):
+
+https://github.com/abdul-rafay-dev0/AssureX-Warranty-Claim-Engine
+
+--------------------------------------------------------------------
+TO UPDATE THIS FILE
+--------------------------------------------------------------------
+1. Open this file (github_link.txt).
+2. Replace the sample URL above with your real public GitHub URL.
+3. Make sure the repository is set to PUBLIC.
+
+--------------------------------------------------------------------
+REPOSITORY CONTENTS (what to upload)
+--------------------------------------------------------------------
+README.md
+AI_USAGE.md
+requirements.txt
+LICENSE
+src/                  (backend, ml_service, frontend source)
+templates/            (HTML)
+static/               (CSS / JS assets)
+data/                 (structured CSV datasets)
+notebooks/
+model/                (saved Python model, Teachable Machine model, label encoder)
+policies/             (warranty policy JSON files)
+dataset_generator/    (dataset generation + card rendering scripts)
+database/             (database scripts)
+tests/                (automated tests)
+sample_claims/        (sample claim data)
+documentation/        (FRD, diagrams, reports)
+screenshots/
+reports/
+config/
+
+--------------------------------------------------------------------
+PUSH COMMANDS (first time)
+--------------------------------------------------------------------
+git init
+git add .
+git commit -m "AssureX Claim Engine - initial submission"
+git branch -M main
+git remote add origin https://github.com/your-username/assurex-claim-engine.git
+git push -u origin main
+
+--------------------------------------------------------------------
+NOTES
+--------------------------------------------------------------------
+- Do NOT commit the real .env (secrets). Use .env.example.
+- Large generated folders (node_modules, data/summary_cards, dataset/cards)
+  are excluded and can be regenerated with the scripts.
+- If a single file exceeds 100 MB, use Git LFS.

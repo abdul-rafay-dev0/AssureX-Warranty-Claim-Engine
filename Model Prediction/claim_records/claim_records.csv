@@ -1,0 +1,33 @@
+claim_id,product_category,product_age_months,warranty_duration_months,remaining_warranty_months,purchase_price,fault_type,repair_history_count,unauthorized_repair_flag,serial_number_match,receipt_attached,warranty_card_attached,damage_photo_attached,serial_photo_attached,contradiction_flag,duplicate_flag,class_label
+CLM-M-4568,Home Appliances,12,12,0,566.49,charging_issue,2,0,1,1,1,1,1,1,1,Manual_Review
+CLM-M-4647,Mobile,10,12,2,937.7,charging_issue,2,1,1,1,1,1,1,0,0,Manual_Review
+CLM-M-5250,Mobile,8,12,4,2229.73,charging_issue,2,1,1,1,1,1,1,0,0,Manual_Review
+CLM-M-6288,Home Appliances,11,12,1,1102.6,charging_issue,2,1,1,1,1,1,1,1,0,Manual_Review
+CLM-V-5880,Mobile,9,12,3,2192.89,battery_failure,2,0,1,1,1,1,1,0,0,Valid
+CLM-M-0285,Home Appliances,14,24,10,2130.59,charging_issue,2,0,1,1,1,1,0,1,1,Manual_Review
+CLM-M-0710,Electronics,24,24,0,564.56,charging_issue,2,0,1,1,1,1,1,1,0,Manual_Review
+CLM-I-2163,Electronics,51,24,-27,2081.3,motor_failure,4,0,1,1,0,1,0,0,1,Invalid
+CLM-I-0414,Electronics,28,24,-4,1422.55,display_defect,3,0,1,1,1,1,1,0,1,Invalid
+CLM-I-0144,Electronics,4,12,8,166.02,liquid_damage,5,1,0,0,1,1,0,0,1,Invalid
+CLM-I-3760,Home Appliances,23,24,1,2311.05,unauthorized_modification,2,1,0,1,1,1,0,0,1,Invalid
+CLM-V-5125,Home Appliances,1,12,11,618.16,battery_failure,0,0,1,1,1,1,1,0,0,Valid
+CLM-V-3553,Home Appliances,15,24,9,2338.0,charging_issue,1,0,1,1,1,1,1,0,0,Valid
+CLM-I-1187,Home Appliances,41,12,-29,2462.9,motor_failure,4,0,1,1,0,1,1,0,0,Invalid
+CLM-V-3700,Electronics,8,12,4,1631.88,motor_failure,2,0,1,1,1,1,1,0,0,Valid
+CLM-V-4357,Home Appliances,12,24,12,1354.87,charging_issue,2,0,1,1,1,1,1,0,0,Valid
+CLM-I-4949,Mobile,53,24,-29,118.11,display_defect,4,0,1,1,1,1,1,0,0,Invalid
+CLM-V-0554,Home Appliances,22,24,2,1714.33,display_defect,2,0,1,1,1,1,1,0,0,Valid
+CLM-I-6469,Home Appliances,5,12,7,611.89,tampered,2,1,0,1,1,1,1,0,0,Invalid
+CLM-M-4311,Home Appliances,24,24,0,2075.49,overheating,5,0,1,1,1,1,1,0,0,Manual_Review
+CLM-M-2201,Mobile,3,12,9,1456.47,intermittent_fault,4,1,1,0,1,1,0,1,0,Manual_Review
+CLM-V-3885,Mobile,10,12,2,2291.56,motor_failure,2,0,1,1,1,1,1,0,0,Valid
+CLM-M-2361,Mobile,10,12,2,1306.81,charging_issue,5,1,0,1,0,1,1,0,0,Manual_Review
+CLM-V-5861,Electronics,1,12,11,1539.72,battery_failure,0,0,1,1,1,1,0,0,0,Valid
+CLM-I-3549,Mobile,45,24,-21,558.56,display_defect,0,0,1,1,1,1,0,0,0,Invalid
+CLM-I-4406,Mobile,13,24,11,1863.36,unauthorized_modification,1,1,1,0,1,1,1,0,0,Invalid
+CLM-I-4164,Electronics,25,12,-13,291.8,battery_failure,2,0,1,1,1,1,1,0,0,Invalid
+CLM-I-6274,Electronics,17,24,7,211.09,tampered,2,1,1,0,0,1,0,0,1,Invalid
+CLM-M-5958,Mobile,2,12,10,2268.83,charging_issue,2,0,0,1,0,1,1,1,0,Manual_Review
+CLM-M-0093,Home Appliances,12,12,0,1445.75,intermittent_fault,5,0,1,1,1,1,1,0,0,Manual_Review
+CLM-V-1659,Mobile,27,36,9,1191.08,charging_issue,0,0,1,1,1,1,1,0,0,Valid
+CLM-I-6502,Home Appliances,7,12,5,1030.72,battery_failure,5,1,0,1,0,1,0,0,0,Invalid

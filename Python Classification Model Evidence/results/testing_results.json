@@ -1,0 +1,28 @@
+{
+  "accuracy": 0.9630123292235921,
+  "precision_weighted": 0.9629559788413867,
+  "recall_weighted": 0.9630123292235921,
+  "f1_weighted": 0.9628267362591124,
+  "confusion_matrix": [
+    [
+      962,
+      0,
+      0
+    ],
+    [
+      35,
+      965,
+      33
+    ],
+    [
+      0,
+      43,
+      963
+    ]
+  ],
+  "classes": [
+    "Invalid",
+    "Manual_Review",
+    "Valid"
+  ]
+}

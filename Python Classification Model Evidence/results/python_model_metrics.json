@@ -1,0 +1,105 @@
+{
+  "version": "1.0.0",
+  "best_algorithm": "RandomForest",
+  "trained_at": "2026-09-28T10:16:25.576729Z",
+  "classes": [
+    "Invalid",
+    "Manual_Review",
+    "Valid"
+  ],
+  "candidates": {
+    "RandomForest": {
+      "accuracy": 0.9604761904761905,
+      "precision": 0.9603952043368061,
+      "recall": 0.9604761904761905,
+      "f1": 0.9602456752608716,
+      "confusion_matrix": [
+        [
+          673,
+          0,
+          0
+        ],
+        [
+          25,
+          670,
+          28
+        ],
+        [
+          0,
+          30,
+          674
+        ]
+      ]
+    },
+    "XGBoost": {
+      "accuracy": 0.9585714285714285,
+      "precision": 0.9584641527875518,
+      "recall": 0.9585714285714285,
+      "f1": 0.9583446265856855,
+      "confusion_matrix": [
+        [
+          671,
+          2,
+          0
+        ],
+        [
+          25,
+          668,
+          30
+        ],
+        [
+          0,
+          30,
+          674
+        ]
+      ]
+    },
+    "LogisticRegression": {
+      "accuracy": 0.9514285714285714,
+      "precision": 0.9516622983786885,
+      "recall": 0.9514285714285714,
+      "f1": 0.9511364423860611,
+      "confusion_matrix": [
+        [
+          668,
+          0,
+          5
+        ],
+        [
+          24,
+          654,
+          45
+        ],
+        [
+          0,
+          28,
+          676
+        ]
+      ]
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.9630123292235921,
+    "precision": 0.9629559788413867,
+    "recall": 0.9630123292235921,
+    "f1": 0.9628267362591124,
+    "confusion_matrix": [
+      [
+        962,
+        0,
+        0
+      ],
+      [
+        35,
+        965,
+        33
+      ],
+      [
+        0,
+        43,
+        963
+      ]
+    ]
+  },
+  "test_report": "               precision    recall  f1-score   support\n\n      Invalid       0.96      1.00      0.98       962\nManual_Review       0.96      0.93      0.95      1033\n        Valid       0.97      0.96      0.96      1006\n\n     accuracy                           0.96      3001\n    macro avg       0.96      0.96      0.96      3001\n weighted avg       0.96      0.96      0.96      3001\n"
+}

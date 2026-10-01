@@ -1,0 +1,12 @@
+{
+  "classes": [
+    "Invalid",
+    "Manual_Review",
+    "Valid"
+  ],
+  "encoding": {
+    "Invalid": 0,
+    "Manual_Review": 1,
+    "Valid": 2
+  }
+}

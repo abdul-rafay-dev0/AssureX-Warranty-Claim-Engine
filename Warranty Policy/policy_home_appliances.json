@@ -1,0 +1,81 @@
+{
+  "policy_id": "policy_home_appliances",
+  "policy_name": "Home Appliances Warranty Policy",
+  "version": "1.0.0",
+  "product_categories": ["Refrigerator", "Washing Machine", "Air Conditioner", "Microwave", "Home Appliances"],
+  "coverage_duration_months": [12, 24, 36],
+  "warranty_start_conditions": {
+    "start_event": "purchase_date",
+    "activation_required": true,
+    "activation_window_days": 45,
+    "proof_of_purchase_required": true,
+    "notes": "Compressor and motor coverage begins on the purchase date; installation must be by an authorized technician."
+  },
+  "covered_faults": [
+    "motor_failure",
+    "cooling_failure",
+    "compressor_failure",
+    "power_issue",
+    "control_board_failure",
+    "heating_element_failure",
+    "drain_failure"
+  ],
+  "exclusions": {
+    "damage_types": [
+      "liquid_damage",
+      "physical_impact",
+      "power_surge",
+      "installation_error",
+      "pest_damage",
+      "unauthorized_modification"
+    ],
+    "conditions": [
+      "Damage from improper installation is not covered",
+      "Normal wear parts are excluded after 6 months",
+      "Commercial or industrial use voids the standard warranty"
+    ]
+  },
+  "claim_reporting_period_days": 45,
+  "repair_conditions": {
+    "authorized_only": true,
+    "max_repairs_before_review": 2,
+    "parts_must_be_oem": true,
+    "notes": "Gas refills and compressor repairs must be performed by an authorized technician."
+  },
+  "authorized_service_center": {
+    "required": true,
+    "centers": ["AuthorizedHub", "BrandService", "CityRepair"],
+    "outside_center_action": "hard_fail"
+  },
+  "replacement_conditions": {
+    "max_product_age_months_for_replacement": 24,
+    "requires_authorization": true,
+    "not_covered_if_already_replaced": true
+  },
+  "grace_period_days": 15,
+  "mandatory_documents": ["purchase_receipt", "warranty_card", "product_photo"],
+  "hard_fail_rules": [
+    "warranty_expired",
+    "excluded_damage",
+    "replacement_already_completed",
+    "outside_coverage_category",
+    "unauthorized_repair"
+  ],
+  "warning_rules": [
+    "missing_document",
+    "borderline_expiry",
+    "repair_history_exceeded",
+    "late_reporting_near_limit"
+  ],
+  "manual_review_rules": [
+    "date_contradiction",
+    "possible_duplicate",
+    "serial_mismatch",
+    "uncertain_serial",
+    "incomplete_warranty_info",
+    "conflicting_evidence",
+    "unknown_repair_authorization",
+    "model_disagreement",
+    "low_confidence"
+  ]
+}
