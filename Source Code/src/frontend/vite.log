@@ -1,0 +1,455 @@
+
+> assurex-frontend@1.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m555[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://110.38.246.50:[1m5174[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://10.255.22.211:[1m5174[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.28.176.1:[1m5174[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m11:23:43 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx, /src/pages/Login.jsx, /src/pages/Register.jsx[22m
+[2m11:23:43 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Login.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Login.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Login() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:43 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/components/AppShell.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/components/AppShell.jsx[39m:5:17
+[33m  20 |  import { useAuth } from "../context/AuthContext.jsx";
+  21 |  import NotificationBell from "./NotificationBell.jsx";
+  22 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  23 |  import {
+  24 |    IconDashboard,[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 7)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:43 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Register.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Register.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Register() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:43 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/components/AppShell.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/components/AppShell.jsx[39m:5:17
+[33m  20 |  import { useAuth } from "../context/AuthContext.jsx";
+  21 |  import NotificationBell from "./NotificationBell.jsx";
+  22 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  23 |  import {
+  24 |    IconDashboard,[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 7)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:43 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Login.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Login.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Login() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:43 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Register.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Register.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Register() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:46 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/components/AppShell.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/components/AppShell.jsx[39m:5:17
+[33m  20 |  import { useAuth } from "../context/AuthContext.jsx";
+  21 |  import NotificationBell from "./NotificationBell.jsx";
+  22 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  23 |  import {
+  24 |    IconDashboard,[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 7)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "../assets/assurex_logo.png" from "src/components/AppShell.jsx". Does the file exist?
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Login.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Login.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Login() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Register.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Register.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Register() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Login.jsx". Does the file exist?
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Register.jsx". Does the file exist?
+[2m11:23:46 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Login.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Login.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Login() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Login.jsx". Does the file exist?
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Register.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Register.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Register() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/components/AppShell.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/components/AppShell.jsx[39m:5:17
+[33m  20 |  import { useAuth } from "../context/AuthContext.jsx";
+  21 |  import NotificationBell from "./NotificationBell.jsx";
+  22 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  23 |  import {
+  24 |    IconDashboard,[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 7)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Register.jsx". Does the file exist?
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "../assets/assurex_logo.png" from "src/components/AppShell.jsx". Does the file exist?
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/components/AppShell.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/components/AppShell.jsx[39m:5:17
+[33m  20 |  import { useAuth } from "../context/AuthContext.jsx";
+  21 |  import NotificationBell from "./NotificationBell.jsx";
+  22 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  23 |  import {
+  24 |    IconDashboard,[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 7)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Login.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Login.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Login() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:46 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Register.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Register.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Register() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:49 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m11:23:49 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "../assets/assurex_logo.png" from "src/components/AppShell.jsx". Does the file exist?
+[2m11:23:49 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Login.jsx". Does the file exist?
+[2m11:23:49 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Register.jsx". Does the file exist?
+[2m11:23:49 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/components/AppShell.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/components/AppShell.jsx[39m:5:17
+[33m  20 |  import { useAuth } from "../context/AuthContext.jsx";
+  21 |  import NotificationBell from "./NotificationBell.jsx";
+  22 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  23 |  import {
+  24 |    IconDashboard,[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 7)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:49 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/components/AppShell.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/components/AppShell.jsx[39m:5:17
+[33m  20 |  import { useAuth } from "../context/AuthContext.jsx";
+  21 |  import NotificationBell from "./NotificationBell.jsx";
+  22 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  23 |  import {
+  24 |    IconDashboard,[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 7)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:49 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Login.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Login.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Login() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:49 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Register.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Register.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Register() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:49 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Login.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Login.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Login() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:23:49 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../assets/assurex_logo.png" from "src/pages/Register.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36mC:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/src/pages/Register.jsx[39m:6:17
+[33m  21 |  import { useAuth } from "../context/AuthContext.jsx";
+  22 |  import { IconCheck } from "../components/Icons.jsx";
+  23 |  import logo from "../assets/assurex_logo.png";
+     |                    ^
+  24 |  export default function Register() {
+  25 |    _s();[39m
+      at TransformPluginContext._formatError (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49258:41)
+      at TransformPluginContext.error (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49253:16)
+      at normalizeUrl (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64307:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64439:39
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:64366:7)
+      at async PluginContainer.transform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49099:18)
+      at async loadAndTransform (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:51978:27)
+      at async viteTransformMiddleware (file:///C:/Users/GLX-Irtaza/Desktop/sfc_bit_py/frontend/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62106:24)
+[2m11:24:05 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx[22m
+[2m12:25:17 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ClaimDetail.jsx[22m
+[2m12:25:23 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ClaimDetail.jsx[22m
+[2m12:25:29 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ReviewerQueue.jsx[22m
+[2m12:25:35 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/CustomerDashboard.jsx[22m
+[2m12:25:48 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ClaimDetail.jsx[22m
+[2m1:05:42 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Icons.jsx[22m
+[2m1:05:43 PM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Icons.jsx[22m Could not Fast Refresh (new export)
+[2m1:05:43 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx, /src/pages/Login.jsx, /src/pages/Products.jsx, /src/pages/Register.jsx, /src/pages/ClaimsList.jsx, /src/pages/CustomerDashboard.jsx, /src/pages/ProductForm.jsx, /src/pages/AdminDashboard.jsx, /src/pages/ClaimDetail.jsx, /src/pages/ClaimWizard.jsx, /src/components/badges.jsx, /src/components/NotificationBell.jsx[22m
+[2m1:05:48 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx[22m
+[2m1:05:54 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx[22m
+[2m1:06:07 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx[22m
+[2m1:06:49 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx[22m
+[2m1:21:26 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx[22m
+[2m1:21:42 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:27:12 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:41:24 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/notifications[39m
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
+[2m2:30:13 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ClaimDetail.jsx[22m
+[2m2:30:25 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ClaimDetail.jsx[22m
+[2m2:30:32 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ClaimDetail.jsx[22m
+[2m2:30:38 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ClaimDetail.jsx[22m
+[2m2:45:09 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx[22m
+[2m2:45:23 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx[22m
+[2m2:45:41 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx[22m
+[2m2:45:48 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Icons.jsx[22m
+[2m2:45:48 PM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Icons.jsx[22m Could not Fast Refresh (new export)
+[2m2:45:48 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AppShell.jsx, /src/pages/Login.jsx, /src/pages/Products.jsx, /src/pages/Register.jsx, /src/pages/ClaimsList.jsx, /src/pages/CustomerDashboard.jsx, /src/pages/ProductForm.jsx, /src/pages/AdminDashboard.jsx, /src/pages/ClaimDetail.jsx, /src/pages/ClaimWizard.jsx, /src/components/badges.jsx, /src/components/NotificationBell.jsx[22m
+[2m2:45:54 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Login.jsx[22m
+[2m2:46:00 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Login.jsx[22m
+[2m2:46:06 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Register.jsx[22m
+[2m2:46:12 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Register.jsx[22m
+[2m2:46:29 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m7:04:44 PM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/products[39m
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16)
