@@ -1,0 +1,28 @@
+# Python
+**/__pycache__/
+*.pyc
+**/venv/
+**/env/
+.env
+
+# Node
+**/node_modules/
+
+# IDE & OS
+**/.vscode/
+**/.idea/
+.DS_Store
+Thumbs.db
+
+# Nested Git Folders
+**/.git/
+
+# Large Datasets (30k files - do NOT upload)
+Dataset/
+**/Dataset/
+
+# Video files (upload to YouTube/Drive instead)
+Video/
+*.mp4
+*.mov
+*.avi
